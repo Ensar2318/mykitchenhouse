@@ -1,0 +1,74 @@
+/* Colors */
+
+$colors: (
+    "leather": #b88d36,
+    "leather-100": #a87c2c,
+    "dark-beige": #af9762,
+    "butterscotch": #e6bb52,
+    "brown": #d4b982,
+    "brown-100": #d5ba7e,
+    "light-creme": #fff8f2,
+    "body-bg": white,
+    "light": #f8f8f8,
+    "light-100": #efefef,
+    "light-200": #d6d6d6,
+    "grey": #dedede,
+    "grey-100": #d6d6d6,
+    "grey-200": #a3a3a3,
+    "grey-300": #7e7e7e,
+    "grey-cool": #9fa1aa,
+    "warm-grey": #989898,
+    "slate-grey": #52525f,
+    "slate-grey-100": #595c69,
+    "charcoal-grey": #2b2a35,
+    "charcoal-grey-100": #303036,
+    "ghost": #fafafa,
+    "white": #ffffff,
+    "black": #000000,
+    "black-100": #333333,
+
+);
+
+$leather: #b88d36;
+$leather-100: #a87c2c;
+
+$dark-beige:#af9762;
+
+$butterscotch: #e6bb52;
+
+$butterscotch-leather-gradient: linear-gradient(259deg, var(--butterscotch) 74%, var(--leather) -13%);
+
+$brown: #d4b982;
+$brown-100: #d5ba7e;
+
+$light-creme:#fff8f2;
+
+$light: #f8f8f8;
+$light-100: #efefef;
+$light-200: #d6d6d6;
+
+$grey:#dedede;
+$grey-100: #d6d6d6;
+$grey-200: #a3a3a3;
+$grey-300: #7e7e7e;
+
+$grey-cool:#9fa1aa;
+$warm-grey:#989898;
+
+$slate-grey:#52525f;
+$slate-grey-100:#595c69;
+
+$charcoal-grey:#2b2a35;
+$charcoal-grey-100:#303036;
+
+$ghost:#fafafa;
+
+$white: #ffffff;
+$black: #000000;
+$black-100: #333333;
+
+$transition: 0.6s;
+
+// fonts
+$montserrat: "montserrat";
+$avenir: "avenir";

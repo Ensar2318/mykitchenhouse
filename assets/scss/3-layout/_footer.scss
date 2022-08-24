@@ -1,0 +1,118 @@
+footer {
+    padding: 55px 0 80px 0;
+    background-color: $gray-100;
+    @include media-down("lg") {
+        text-align: center;
+        padding: 30px 0;
+    }
+    .brand {
+        margin-bottom: 30px;
+    }
+    .contact {
+        display: block;
+        list-style: none;
+        li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 22px;
+            @include media-down("lg") {
+                justify-content: center;
+            }
+            span {
+                font-size: 18px;
+                width: 24px;
+                &.icon-telephone {
+                    font-size: 22px;
+                }
+                &.icon-map-pin {
+                    font-size: 24px;
+                }
+            }
+            p {
+                font-family: $encode;
+                font-size: 16px;
+                font-weight: 400;
+                color: $primary;
+                margin-left: 11px;
+                margin-bottom: 0;
+                line-height: 28px;
+                @include media-down("sm") {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .links {
+        list-style: none;
+        padding-top: 20px;
+        li {
+            margin-bottom: 18px;
+            a {
+                font-family: $encode;
+                font-size: 16px;
+                @include linkHover($primary, $secondary, $transition);
+            }
+        }
+    }
+    .social {
+        padding-top: 20px;
+        @include media-down("md") {
+            padding-top: 10px;
+        }
+        h4 {
+            font: 25px $encode;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+        p {
+            font: 16px $encode;
+            font-weight: 400;
+        }
+        .social-title {
+            @include media-down("md") {
+                display: none;
+            }
+        }
+        .socials-links {
+            display: flex;
+            margin-top: 16px;
+            @include media-down("lg"){
+                justify-content: center;
+                align-items: center;
+               
+            }
+            @include media-down("sm"){
+                margin-top: 0px;
+            }
+            a {
+                font-size: 20px;
+                width: 32px;
+                height: 32px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: solid 1px $gray-400;
+                border-radius: 6px;
+                color: $primary-100;
+                transition: $transition;
+                &:hover{
+                    background-color: $gray-400;
+                    
+                }
+                & + a {
+                    margin-left: 30px;
+                }
+            }
+        }
+    }
+}
+.copyright {
+    text-align: center;
+    a {
+        display: block;
+        font: 16px $encode;
+        padding: 30px 0;
+        background-color: $gray-300;
+        @include linkHover($primary, $secondary, $transition);
+    }
+}
