@@ -1355,6 +1355,40 @@ footer .footer-content-card li span.icon-map-pin {
   color: #ffffff;
 }
 
+.circle-plus {
+  min-width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px;
+  border: solid 1px #b88d36;
+  position: relative;
+}
+.circle-plus.active .line2 {
+  transform: rotate(90deg);
+}
+.circle-plus .line {
+  height: 2px;
+  width: 12px;
+  background-color: #b88d36;
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.6s;
+}
+.circle-plus .line2 {
+  height: 12px;
+  width: 2px;
+  background-color: #b88d36;
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.6s;
+}
+
 /* ===================================
     Cursor
 ====================================== */
@@ -1716,6 +1750,63 @@ footer .footer-content-card li span.icon-map-pin {
   width: 100%;
   height: 100%;
   filter: grayscale(1);
+}
+
+.default-faq-container {
+  padding-left: 260px;
+  padding-right: 260px;
+}
+@media (max-width: 991px) {
+  .default-faq-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.faq-page-title {
+  text-align: center;
+  margin-bottom: 100px;
+}
+.faq-page-title .title {
+  font: 600 40px "montserrat";
+  margin-bottom: 30px;
+}
+.faq-page-title p {
+  font: 400 18px "montserrat";
+}
+
+.faq-wrap .default-faq-item {
+  border-bottom: solid 1px #d9d8e7;
+}
+.faq-wrap .default-faq-item.active h3 {
+  font: 500 18px "montserrat";
+  color: #b88d36;
+}
+.faq-wrap .default-faq-item.active .circle-plus .line2 {
+  transform: rotate(90deg);
+}
+.faq-wrap .default-faq-item .faq-title {
+  padding: 33px 0;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: 0.6s;
+}
+.faq-wrap .default-faq-item .faq-title:hover {
+  color: #b88d36;
+}
+.faq-wrap .default-faq-item .faq-title h3 {
+  font: 400 18px "montserrat";
+}
+.faq-wrap .default-faq-item .faq-content p {
+  font: 400 18px "montserrat";
+  padding-right: 100px;
+  padding-bottom: 50px;
+}
+@media (max-width: 991px) {
+  .faq-wrap .default-faq-item .faq-content p {
+    padding-right: 10px;
+  }
 }
 
 .morphext .animated {

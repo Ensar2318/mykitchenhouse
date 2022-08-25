@@ -56,3 +56,40 @@
         color: $white;
     }
 }
+
+.circle-plus{
+    min-width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    border: solid 1px $leather;
+    position: relative;
+    &.active{
+        .line2{
+            transform: rotate(90deg);
+        }
+    }
+    .line{
+        height: 2px;
+        width: 12px;
+        background-color: $leather;
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: $transition;
+
+    }
+    .line2{
+        height: 12px;
+        width: 2px;
+        background-color: $leather;
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: $transition;
+    }
+}

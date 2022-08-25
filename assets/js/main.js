@@ -2,6 +2,18 @@
 $(document).ready(function() {
     $("#header").load("header.html");
     $("#footer").load("footer.html");
+
+    $(".faq-wrap .faq-content").slideUp();
+    $(".faq-wrap .faq-title").click(function (e) { 
+        e.preventDefault();
+        if(!$(this).parent().hasClass("active")){
+            $(".faq-wrap .faq-content").slideUp();
+            $(".faq-wrap .default-faq-item").removeClass("active");
+        }
+            $(this).parent().toggleClass("active");
+            $(this).parent().children(".faq-content").slideToggle();
+        
+    });
 });
 
 $(document).scroll(function () { 
