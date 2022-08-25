@@ -1130,12 +1130,21 @@ body {
   color: #000000;
 }
 
+.first-section {
+  padding-top: 200px;
+}
+
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 9999;
+  background-color: #ffffff;
+  transition: 0.6s;
+}
+header.scrolled {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 header .logo {
   margin-right: auto;
@@ -1179,8 +1188,8 @@ header .header .socials a {
   padding: 4px;
   border: solid 1px rgba(213, 185, 126, 0.1725490196);
   color: #d5ba7e;
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   align-items: center;
   justify-content: center;
   margin-left: 12px;
@@ -1226,6 +1235,66 @@ header .header .search-input span {
   cursor: pointer;
 }
 
+footer {
+  padding: 65px 0;
+}
+@media (max-width: 767px) {
+  footer {
+    padding: 65px 20px;
+  }
+}
+footer .logo-side img {
+  padding-bottom: 30px;
+}
+footer .logo-side p {
+  font: 400 14px "montserrat";
+  line-height: 24px;
+}
+@media (max-width: 991px) {
+  footer .logo-side {
+    text-align: center;
+  }
+}
+footer .title {
+  color: #af9762;
+  font: 500 16px "montserrat";
+}
+footer ol {
+  font: 400 16px "montserrat";
+  padding-top: 30px;
+  list-style: none;
+}
+footer ol li {
+  margin-bottom: 16px;
+}
+footer ol li a {
+  transition: 0.6s;
+}
+footer ol li a:hover {
+  color: #b88d36;
+}
+footer .footer-content-card {
+  border: solid 1px #f7f7f7;
+  padding: 30px 28px;
+  line-height: 24px;
+}
+footer .footer-content-card li {
+  display: flex;
+  align-items: center;
+}
+footer .footer-content-card li span {
+  margin-right: 15px;
+  color: #d5ba7e;
+  font-size: 18px;
+  width: 20px;
+}
+footer .footer-content-card li span.icon-mail {
+  font-size: 15px;
+}
+footer .footer-content-card li span.icon-map-pin {
+  font-size: 25px;
+}
+
 .btn-brown-outline {
   color: #d4b982;
   min-width: 110px;
@@ -1253,6 +1322,37 @@ header .header .search-input span {
 }
 .btn-butterscotch-leather-100:hover {
   opacity: 0.8;
+}
+
+.btn-soft-grey {
+  color: #ffffff;
+  background-color: #AAAAAA;
+  min-width: 110px;
+  padding: 11px 20px;
+  transition: 0.6s;
+  display: inline-block;
+  text-align: center;
+  font: 600 23px "montserrat";
+}
+.btn-soft-grey:hover {
+  background-color: #b88d36;
+  color: #ffffff;
+}
+
+.btn-white {
+  color: #000000;
+  background-color: #ffffff;
+  min-width: 110px;
+  padding: 11px 20px;
+  transition: 0.6s;
+  display: inline-block;
+  text-align: center;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  font: 600 23px "montserrat";
+}
+.btn-white:hover {
+  background-color: #b88d36;
+  color: #ffffff;
 }
 
 /* ===================================
@@ -1298,6 +1398,65 @@ header .header .search-input span {
   font: 450 16px "avenir";
   color: #7e7e7e;
   line-height: 22px;
+  margin-right: 40px;
+}
+@media (max-width: 991px) {
+  .who-we-are-wrap .fs-2 {
+    margin-right: 0;
+  }
+}
+.who-we-are-wrap .image-container {
+  position: relative;
+}
+.who-we-are-wrap .image-container .play-btn {
+  width: 111px;
+  height: 111px;
+  border-radius: 111px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+.who-we-are-wrap .image-container .play-btn:hover svg {
+  transform: scale(1.1);
+}
+.who-we-are-wrap .image-container .play-btn svg {
+  transition: 0.6s;
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+}
+
+.footer-hero-container {
+  background-image: url(../img/footer-hero-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 50px;
+}
+
+.footer-hero-wrap {
+  max-width: 620px;
+  text-align: center;
+}
+.footer-hero-wrap img {
+  margin-bottom: 30px;
+}
+.footer-hero-wrap p {
+  font: 500 20px "montserrat";
+  margin-bottom: 26px;
+}
+.footer-hero-wrap a {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 500 20px "montserrat";
 }
 
 .product-features-wrap {
@@ -1398,6 +1557,165 @@ header .header .search-input span {
 }
 .featured-pagination .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: #ffffff;
+}
+
+.featured-swiper-container h2 {
+  font: 700 38px "montserrat";
+  color: #000000;
+  text-align: center;
+}
+.featured-swiper-container .featuredProductFluidSwiper .featuredProductFluidSwiper-button-prev,
+.featured-swiper-container .featuredProductFluidSwiper .featuredProductFluidSwiper-button-next {
+  color: #d5ba7e;
+  margin: 0 10px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.6s;
+}
+.featured-swiper-container .featuredProductFluidSwiper .featuredProductFluidSwiper-button-prev.swiper-button-disabled,
+.featured-swiper-container .featuredProductFluidSwiper .featuredProductFluidSwiper-button-next.swiper-button-disabled {
+  color: #dedede;
+}
+.featured-swiper-container .featuredProductFluidSwiper .card-wrap {
+  position: relative;
+}
+.featured-swiper-container .featuredProductFluidSwiper .card-wrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.featured-swiper-container .featuredProductFluidSwiper .card-wrap .card-title {
+  position: absolute;
+  top: 64px;
+  left: 30px;
+  font: 500 36px "montserrat";
+  color: #d5ba7e;
+}
+.featured-swiper-container .featuredProductFluidSwiper .card-wrap .sub-title {
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  text-orientation: upright;
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+  font: 500 17px "montserrat";
+  color: #ffffff;
+}
+
+.brand-information-card {
+  display: flex;
+  flex-direction: column;
+  padding: 54px;
+  border: solid 2px #e5e5e5;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  height: 100%;
+}
+.brand-information-card.active {
+  border: none;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.brand-information-card .square {
+  width: 111px;
+  height: 111px;
+  border-radius: 8px;
+  border: 1px solid #e6bb52;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 36px;
+}
+.brand-information-card .title {
+  font: 700 38px "montserrat";
+  color: #000000;
+  margin-bottom: 18px;
+}
+.brand-information-card p {
+  font: 450 16px "avenir";
+  color: #000000;
+  line-height: 22px;
+}
+.brand-information-card a {
+  min-width: 225px;
+  height: 73px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 600 23px "montserrat";
+}
+
+.contact-us-bg-container {
+  background-image: url(../img/contact-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact-us-wrap .title {
+  font: 700 61px "montserrat";
+  margin-bottom: 16px;
+}
+.contact-us-wrap .sub-title {
+  font: 400 32px "montserrat";
+  color: #d5ba7e;
+  margin-bottom: 10px;
+}
+.contact-us-wrap .mini-title {
+  font: 400 24px "montserrat";
+  margin-bottom: 55px;
+}
+.contact-us-wrap .contact-form-wrap {
+  max-width: 630px;
+}
+.contact-us-wrap .contact-form-wrap.fluid {
+  max-width: 100%;
+}
+.contact-us-wrap .contact-form-wrap input {
+  width: 100%;
+  padding: 25px;
+  height: 70px;
+  background-color: rgba(214, 214, 214, 0.215);
+  margin-bottom: 16px;
+  font: 500 18px "montserrat";
+  color: #000000;
+}
+.contact-us-wrap .contact-form-wrap input::-moz-placeholder {
+  color: rgba(163, 163, 163, 0.575);
+}
+.contact-us-wrap .contact-form-wrap input:-ms-input-placeholder {
+  color: rgba(163, 163, 163, 0.575);
+}
+.contact-us-wrap .contact-form-wrap input::placeholder {
+  color: rgba(163, 163, 163, 0.575);
+}
+.contact-us-wrap .contact-form-wrap button {
+  width: 100%;
+  height: 70px;
+  font: 700 18px "montserrat";
+}
+@media (max-width: 767px) {
+  .contact-us-wrap {
+    padding: 0 30px;
+  }
+}
+
+.google-map-container span {
+  font-size: 24px;
+  margin-right: 15px;
+  color: #d5ba7e;
+}
+.google-map-container p {
+  font: 300 24px "montserrat";
+}
+.google-map-container .map {
+  height: 500px;
+}
+.google-map-container .map iframe {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(1);
 }
 
 .morphext .animated {

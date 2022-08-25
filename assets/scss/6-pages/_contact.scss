@@ -1,0 +1,67 @@
+.contact-us-bg-container {
+    background-image: url(../img/contact-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contact-us-wrap {
+    .title {
+        font: 700 61px $montserrat;
+        margin-bottom: 16px;
+    }
+    .sub-title {
+        font: 400 32px $montserrat;
+        color: $brown-100;
+        margin-bottom: 10px;
+    }
+    .mini-title {
+        font: 400 24px $montserrat;
+        margin-bottom: 55px;
+    }
+    .contact-form-wrap {
+        max-width: 630px;
+        &.fluid {
+            max-width: 100% ;
+        }
+        input {
+            width: 100%;
+            padding: 25px;
+            height: 70px;
+            background-color: rgba(214, 214, 214, 0.215);
+            margin-bottom: 16px;
+            font: 500 18px $montserrat;
+            color: $black;
+            &::placeholder {
+                color: rgba(163, 163, 163, 0.575);
+            }
+        }
+        button {
+            width: 100%;
+            height: 70px;
+            font: 700 18px $montserrat;
+        }
+    }
+    @include media-down("md") {
+        padding: 0 30px;
+    }
+}
+
+.google-map-container {
+    span {
+        font-size: 24px;
+        margin-right: 15px;
+        color: $brown-100;
+    }
+    p {
+        font: 300 24px $montserrat;
+    }
+    .map {
+        height: 500px;
+        iframe {
+            width: 100%;
+            height: 100%;
+            filter: grayscale(1);
+        }
+    }
+}

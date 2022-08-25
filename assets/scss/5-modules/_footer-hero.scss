@@ -1,0 +1,25 @@
+.footer-hero-container{
+    background-image: url(../img/footer-hero-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 50px;
+}
+.footer-hero-wrap{
+    max-width: 620px;
+    text-align: center;
+    img{
+        margin-bottom: 30px;
+    }
+    p{
+        font: 500 20px $montserrat;
+        margin-bottom: 26px;
+    }
+    a{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font: 500 20px $montserrat;
+    }
+}

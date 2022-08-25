@@ -26,3 +26,33 @@
        opacity: 0.8;
     }
 }
+.btn-soft-grey{
+    color: $white;
+    background-color: #AAAAAA;
+    min-width: 110px;
+    padding: 11px 20px;
+    transition: $transition;
+    display: inline-block;
+    text-align: center;
+    font: 600 23px $montserrat;
+    &:hover{
+        background-color: $leather;
+        color: $white;
+    }
+}
+
+.btn-white{
+    color: $black;
+    background-color: $white;
+    min-width: 110px;
+    padding: 11px 20px;
+    transition: $transition;
+    display: inline-block;
+    text-align: center;
+    box-shadow: $box-shadow;
+    font: 600 23px $montserrat;
+    &:hover{
+        background-color: $leather;
+        color: $white;
+    }
+}

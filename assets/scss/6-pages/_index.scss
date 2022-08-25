@@ -27,7 +27,7 @@
             padding-bottom: 7px;
             margin-bottom: 24px;
             position: relative;
-            &::after{
+            &::after {
                 content: "";
                 height: 4px;
                 width: 160px;
@@ -56,7 +56,6 @@
             &.negative-right {
                 margin: 0;
                 padding: 25px;
-
             }
             &.negative-left {
                 margin: 0;
@@ -68,14 +67,13 @@
 .product-features-container {
     padding: 0 150px;
     overflow: hidden;
-    @include media-down("lg"){
+    @include media-down("lg") {
         padding: 0;
-    
     }
 }
-.feature1Swiper{
+.feature1Swiper {
     height: 100%;
-    img{
+    img {
         height: 100%;
         width: 100%;
     }
@@ -94,4 +92,95 @@
             }
         }
     }
+}
+
+.featured-swiper-container {
+    h2 {
+        font: 700 38px $montserrat;
+        color: $black;
+        text-align: center;
+    }
+    .featuredProductFluidSwiper {
+        .featuredProductFluidSwiper-button-prev,
+        .featuredProductFluidSwiper-button-next {
+            color: $brown-100;
+            margin: 0 10px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: $transition;
+
+            &.swiper-button-disabled {
+                color: $grey;
+            }
+        }
+        .card-wrap {
+            position: relative;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .card-title {
+                position: absolute;
+                top: 64px;
+                left: 30px;
+                font: 500 36px $montserrat;
+                color: $brown-100;
+            }
+            .sub-title {
+                writing-mode: vertical-rl;
+                text-orientation: upright;
+                position: absolute;
+                left: 30px;
+                bottom: 30px;
+                font: 500 17px $montserrat;
+                color: $white;
+            }
+        }
+    }
+}
+
+.brand-information-card {
+    display: flex;
+    flex-direction: column;
+    padding: 54px;
+    border: solid 2px #e5e5e5;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    height: 100%;
+    &.active {
+        border: none;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+    .square {
+        width: 111px;
+        height: 111px;
+        border-radius: 8px;
+        border: 1px solid $butterscotch;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 36px;
+    }
+    .title {
+        font: 700 38px $montserrat;
+        color: $black;
+        margin-bottom: 18px;
+    }
+    p {
+        font: 450 16px $avenir;
+        color: $black;
+        line-height: 22px;
+    }
+    a {
+        min-width: 225px;
+        height: 73px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font: 600 23px $montserrat;
+    }
+
+    
 }
