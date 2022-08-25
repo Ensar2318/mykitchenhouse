@@ -1,7 +1,7 @@
 .default-faq-container {
     padding-left: 260px;
     padding-right: 260px;
-    @include media-down("lg"){
+    @include media-down("lg") {
         padding-left: 20px;
         padding-right: 20px;
     }
@@ -26,8 +26,8 @@
                 font: 500 18px $montserrat;
                 color: $leather;
             }
-            .circle-plus{
-                .line2{
+            .circle-plus {
+                .line2 {
                     transform: rotate(90deg);
                 }
             }
@@ -38,20 +38,24 @@
             justify-content: space-between;
             cursor: pointer;
             transition: $transition;
-            &:hover{
+            &:hover {
                 color: $leather;
             }
-            
+
             h3 {
                 font: 400 18px $montserrat;
             }
         }
         .faq-content {
+            overflow: auto;
+            &.max-height {
+                max-height: 0;
+            }
             p {
                 font: 400 18px $montserrat;
                 padding-right: 100px;
                 padding-bottom: 50px;
-                @include media-down("lg"){
+                @include media-down("lg") {
                     padding-right: 10px;
                 }
             }

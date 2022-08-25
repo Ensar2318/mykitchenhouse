@@ -4,27 +4,30 @@ $(document).ready(function() {
     $("#footer").load("footer.html");
 
     $(".faq-wrap .faq-content").slideUp();
-    $(".faq-wrap .faq-title").click(function (e) { 
+    $(".faq-wrap .faq-title").click(function(e) {
         e.preventDefault();
-        if(!$(this).parent().hasClass("active")){
+        $(".faq-wrap .faq-content").removeClass("max-height");
+
+        if (!$(this).parent().hasClass("active")) {
             $(".faq-wrap .faq-content").slideUp();
             $(".faq-wrap .default-faq-item").removeClass("active");
         }
-            $(this).parent().toggleClass("active");
-            $(this).parent().children(".faq-content").slideToggle();
-        
+        $(this).parent().toggleClass("active");
+        $(this).parent().children(".faq-content").slideToggle();
+
     });
+
+  
 });
 
-$(document).scroll(function () { 
-    if (window.pageYOffset>=100){
+$(document).scroll(function() {
+    if (window.pageYOffset >= 100) {
         $("header").addClass("scrolled");
-    } else{
+    } else {
         $("header").removeClass("scrolled");
 
     }
 });
-
 
 
 
@@ -36,8 +39,6 @@ var feature1Swiper = new Swiper(".feature1Swiper", {
         clickable: true,
     }
 });
-
-
 
 var featuredProductFluidSwiper = new Swiper(".featuredProductFluidSwiper", {
     slidesPerView: 1,
@@ -65,6 +66,38 @@ var featuredProductFluidSwiper = new Swiper(".featuredProductFluidSwiper", {
         prevEl: ".featuredProductFluidSwiper-button-prev",
     },
 
+});
+
+var blogSwiper = new Swiper(".blogSwiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    loop:true,
+    breakpoints: {
+
+        650: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        1200: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+    },
+    autoplay: {
+        delay: 2000,
+      },
+
+});
+
+
+const lightbox = GLightbox({
+    touchNavigation: true,
+    loop: true,
+    autoplayVideos: true
 });
 
 

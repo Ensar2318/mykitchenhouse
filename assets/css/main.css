@@ -1389,6 +1389,20 @@ footer .footer-content-card li span.icon-map-pin {
   transition: 0.6s;
 }
 
+.page-title-v1 .title {
+  font: 700 61px "montserrat";
+  margin-bottom: 16px;
+}
+.page-title-v1 .sub-title {
+  font: 400 32px "montserrat";
+  color: #d5ba7e;
+  margin-bottom: 10px;
+}
+.page-title-v1 .mini-title {
+  font: 400 24px "montserrat";
+  margin-bottom: 55px;
+}
+
 /* ===================================
     Cursor
 ====================================== */
@@ -1453,8 +1467,12 @@ footer .footer-content-card li span.icon-map-pin {
   position: absolute;
   top: 50%;
   left: 50%;
+  transition: 0.6s;
   transform: translate(-50%, -50%);
   cursor: pointer;
+}
+.who-we-are-wrap .image-container .play-btn:hover {
+  background-color: #f8f8f8;
 }
 .who-we-are-wrap .image-container .play-btn:hover svg {
   transform: scale(1.1);
@@ -1798,6 +1816,12 @@ footer .footer-content-card li span.icon-map-pin {
 .faq-wrap .default-faq-item .faq-title h3 {
   font: 400 18px "montserrat";
 }
+.faq-wrap .default-faq-item .faq-content {
+  overflow: auto;
+}
+.faq-wrap .default-faq-item .faq-content.max-height {
+  max-height: 0;
+}
 .faq-wrap .default-faq-item .faq-content p {
   font: 400 18px "montserrat";
   padding-right: 100px;
@@ -1807,6 +1831,193 @@ footer .footer-content-card li span.icon-map-pin {
   .faq-wrap .default-faq-item .faq-content p {
     padding-right: 10px;
   }
+}
+
+.product-detail-images-wrap img {
+  width: 100%;
+}
+.product-detail-images-wrap img:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.product-detail-info {
+  top: 140px;
+  position: -webkit-sticky;
+  position: sticky;
+  padding: 60px 36px;
+  background-color: #F5F5F5;
+  transition: 0.6s;
+}
+.product-detail-info .sub-title {
+  font: 600 20px "montserrat";
+}
+.product-detail-info .title {
+  font: 600 24px "montserrat";
+  margin: 70px 0;
+}
+.product-detail-info .content {
+  list-style: none;
+}
+.product-detail-info .content li {
+  display: flex;
+  justify-content: space-between;
+}
+.product-detail-info .content li:not(:last-child) {
+  margin-bottom: 30px;
+}
+.product-detail-info .content li h4 {
+  font: 700 14px "montserrat";
+}
+.product-detail-info .content li h5 {
+  font: 600 16px "montserrat";
+}
+.product-detail-info .buttons {
+  display: flex;
+  align-items: center;
+}
+.product-detail-info .buttons span {
+  color: #d5ba7e;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.6s;
+}
+.product-detail-info .buttons span.not {
+  color: rgba(213, 185, 126, 0.4);
+}
+.product-detail-info .buttons span:hover {
+  color: rgba(213, 185, 126, 0.4);
+}
+
+.blog-detail-container {
+  padding: 0 250px;
+}
+@media (max-width: 991px) {
+  .blog-detail-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.blog-detail-wrap {
+  text-align: center;
+}
+.blog-detail-wrap .title {
+  font: 600 32px "montserrat";
+  margin-bottom: 33px;
+}
+.blog-detail-wrap .title-2 {
+  font: 700 29px "montserrat";
+  color: #af9762;
+  margin-bottom: 44px;
+}
+.blog-detail-wrap img {
+  width: 100%;
+  border-radius: 8px;
+}
+.blog-detail-wrap .blog-content {
+  text-align: start;
+  margin-top: 55px;
+  font: 300 15px "montserrat";
+  line-height: 30px;
+  letter-spacing: 0.38px;
+}
+.blog-detail-wrap .blog-content ol,
+.blog-detail-wrap .blog-content li {
+  list-style-position: inside;
+}
+.blog-detail-wrap .blog-content ol::marker,
+.blog-detail-wrap .blog-content li::marker {
+  font-weight: 400;
+  padding-right: 20px;
+}
+.blog-detail-wrap .blog-content h6 {
+  font: 500 18px "montserrat";
+  line-height: 24px;
+}
+
+.blog-swiper-wrap .blogSwiper {
+  padding-right: 60px;
+}
+@media (max-width: 767px) {
+  .blog-swiper-wrap .blogSwiper {
+    padding: 0;
+  }
+}
+
+.see-all-wrap {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+.see-all-wrap .title {
+  font: 500 24px "montserrat";
+  color: #303036;
+}
+.see-all-wrap .see-all-link {
+  display: flex;
+  align-items: center;
+  font: 400 15px "montserrat";
+  color: #595c69;
+  transition: 0.6s;
+}
+.see-all-wrap .see-all-link:hover {
+  color: #dedede;
+}
+.see-all-wrap .see-all-link span {
+  padding-left: 10px;
+}
+
+.blog-card img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+  height: 500px;
+  width: 100%;
+}
+.blog-card .content {
+  margin-top: 32px;
+}
+.blog-card .content .title {
+  font: 500 18px "montserrat";
+  margin-bottom: 16px;
+  display: block;
+  transition: 0.6s;
+}
+.blog-card .content .title:hover {
+  color: #7e7e7e;
+}
+.blog-card .content .sub-title {
+  font: 300 15px "montserrat";
+  line-height: 1.6;
+  letter-spacing: 0.38px;
+  color: #2b2a35;
+}
+.blog-card .content .feature {
+  font: 500 12px "montserrat";
+  line-height: 1.6;
+  letter-spacing: 0.38px;
+  color: #9fa1aa;
+  margin-bottom: 12px;
+}
+
+.blog-swiper-container {
+  padding: 0 180px;
+}
+@media (max-width: 991px) {
+  .blog-swiper-container {
+    padding: 0px 20px;
+  }
+}
+
+.blog-section {
+  background-color: #fff8f2;
+  padding: 100px 0;
+  margin-top: 300px;
+}
+
+.negative-blog {
+  margin-top: -180px;
 }
 
 .morphext .animated {

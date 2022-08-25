@@ -1,0 +1,119 @@
+.blog-detail-container {
+    padding: 0 250px;
+    @include media-down("lg") {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+.blog-detail-wrap {
+    text-align: center;
+
+    .title {
+        font: 600 32px $montserrat;
+        margin-bottom: 33px;
+    }
+    .title-2 {
+        font: 700 29px $montserrat;
+        color: $dark-beige;
+        margin-bottom: 44px;
+    }
+    img {
+        width: 100%;
+        border-radius: 8px;
+    }
+    .blog-content {
+        text-align: start;
+        margin-top: 55px;
+        font: 300 15px $montserrat;
+        line-height: 30px;
+        letter-spacing: 0.38px;
+        ol,
+        li {
+            list-style-position: inside;
+            &::marker {
+                font-weight: 400;
+                padding-right: 20px;
+            }
+        }
+        h6 {
+            font: 500 18px $montserrat;
+            line-height: 24px;
+        }
+    }
+}
+
+.blog-swiper-wrap {
+   
+    .blogSwiper {
+        padding-right: 60px;
+        @include media-down("md") {
+            padding: 0;
+        }
+    }
+}
+.see-all-wrap {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    .title {
+        font: 500 24px $montserrat;
+        color: $charcoal-grey-100;
+    }
+    .see-all-link {
+        display: flex;
+        align-items: center;
+        font: 400 15px $montserrat;
+        color: $slate-grey-100;
+        transition: $transition;
+        &:hover {
+            color: $grey;
+        }
+        span {
+            padding-left: 10px;
+        }
+    }
+}
+
+
+.blog-card {
+    img {
+        object-fit: cover;
+        border-radius: 8px;
+        height: 500px;
+        width: 100%;
+    }
+    .content {
+        margin-top: 32px;
+
+        .title {
+            font: 500 18px $montserrat;
+            margin-bottom: 16px;
+            display: block;
+            transition: $transition;
+            &:hover {
+                color: $grey-300;
+            }
+        }
+        .sub-title {
+            font: 300 15px $montserrat;
+            line-height: 1.6;
+            letter-spacing: 0.38px;
+            color: $charcoal-grey;
+        }
+        .feature {
+            font: 500 12px $montserrat;
+            line-height: 1.6;
+            letter-spacing: 0.38px;
+            color: $grey-cool;
+            margin-bottom: 12px;
+        }
+    }
+}
+.blog-swiper-container {
+    padding: 0 180px;
+
+    @include media-down("lg") {
+        padding: 0px 20px;
+    }
+}
