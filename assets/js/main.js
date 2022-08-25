@@ -29,6 +29,16 @@ $(document).scroll(function() {
     }
 });
 
+var heroSwiper = new Swiper(".heroSwiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    navigation: {
+        nextEl: ".heroSwiper-button-next",
+        prevEl: ".heroSwiper-button-prev",
+    },
+    speed:800
+
+});
 
 
 var feature1Swiper = new Swiper(".feature1Swiper", {
@@ -99,6 +109,7 @@ const lightbox = GLightbox({
     loop: true,
     autoplayVideos: true
 });
+
 
 
 

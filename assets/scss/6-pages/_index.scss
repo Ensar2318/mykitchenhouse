@@ -1,3 +1,59 @@
+.hero-swiper-section {
+    padding-top: 130px;
+}
+
+.heroSwiper {
+    .swiper-slide:not(.swiper-slide-active) {
+        .hero-content {
+            opacity: 0;
+            transform: scale(1.2);
+        }
+    }
+    .hero-wrap {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 650px;
+
+        .hero-content {
+            position: relative;
+            transition: 1.4s;
+            transform: scale(1);
+            .title {
+                font: 400 84px $montserrat;
+                margin-bottom: 18px;
+            }
+            .detail {
+                padding: 30px 30px 30px 20px;
+                background-color: rgba(255, 255, 255, 0.72);
+                margin-left: -190px;
+                padding-left: 220px;
+                .heroSwiper-button-prev,
+                .heroSwiper-button-next {
+                    cursor: pointer;
+                    font-size: 20px;
+                    color: $brown-100;
+                    &.swiper-button-disabled {
+                        color: rgba(213, 185, 126, 0.5);
+                    }
+                }
+                p {
+                    font: 450 15px $avenir;
+                }
+            }
+        }
+        img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
 .product-features-wrap {
     padding-top: 50px;
     .main-title {
@@ -181,6 +237,19 @@
         justify-content: center;
         font: 600 23px $montserrat;
     }
-
-    
+}
+.parallax-wrap > *{
+    background-color: white;
+}
+.parallax-wrap {
+    .parallaxed {
+        z-index: -2;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+    }
+    .parallaxed-image {
+        background: transparent;
+        height: 200px;
+    }
 }

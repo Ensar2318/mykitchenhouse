@@ -1,0 +1,68 @@
+.default-hero {
+    padding-top: 130px;
+    padding-bottom: 0;
+    img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+    }
+}
+.hero-below {
+    background-color: $ghost;
+    height: 66px;
+    display: flex;
+    align-items: center;
+
+    color: rgba(0, 0, 0, 0.603);
+    h4 {
+        font: 500 16px $montserrat;
+    }
+    .box {
+        width: 11.5%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        span {
+            color: rgba(0, 0, 0, 0.2);
+        }
+        .count {
+            color: rgba(0, 0, 0, 0.4);
+        }
+    }
+}
+
+.product-section {
+    padding: 44px 0;
+    .product-list-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .view-buttons {
+            display: flex;
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-width: 38px;
+                height: 38px;
+                border: solid 2px rgba(44, 44, 44, 0.1);
+                color: #6e6e6e;
+                background-color: $white;
+                transition: $transition;
+                &.active {
+                    border: none;
+                    background-image: linear-gradient(136deg, $butterscotch 11%, $leather-100 101%);
+                    color: $white;
+                }
+                &:hover {
+                    background-color: $brown-100;
+                    color: $white;
+                    border-color: $brown-100;
+                }
+                &:not(:first-child) {
+                    margin-left: 13px;
+                }
+            }
+        }
+    }
+}

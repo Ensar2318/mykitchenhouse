@@ -36,7 +36,7 @@ $dark-beige:#af9762;
 
 $butterscotch: #e6bb52;
 
-$butterscotch-leather-gradient: linear-gradient(259deg, var(--butterscotch) 74%, var(--leather) -13%);
+$butterscotch-leather-gradient: linear-gradient(259deg, $butterscotch 74%, $leather -13%);
 
 $brown: #d4b982;
 $brown-100: #d5ba7e;
