@@ -1,25 +1,95 @@
-.product-features-wrap{
+.product-features-wrap {
     padding-top: 50px;
-    .main-title{
+    .main-title {
         color: $dark-beige;
         font: 700 55px $montserrat;
         text-align: center;
         margin-bottom: 45px;
     }
+    .product-feature-content {
+        padding: 24px 31px;
+        background-color: rgba(255, 255, 255, 0.85);
+        position: relative;
+        z-index: 2;
+        &.negative-right {
+            margin-left: -160px;
+            margin-right: 70px;
+        }
+        &.negative-left {
+            margin-right: -160px;
+            padding-right: 160px;
+        }
+
+        .title {
+            font: 700 35px $montserrat;
+            color: $dark-beige;
+            display: inline-block;
+            padding-bottom: 7px;
+            margin-bottom: 24px;
+            position: relative;
+            &::after{
+                content: "";
+                height: 4px;
+                width: 160px;
+                bottom: 0;
+                left: 0;
+                background-color: $dark-beige;
+                position: absolute;
+            }
+        }
+        p {
+            font: 500 16px $montserrat;
+            color: $black;
+            margin-bottom: 26px;
+            line-height: 1.38;
+        }
+        @include media-down("xl") {
+            padding: 25px;
+            .title {
+                font-size: 25px;
+                margin-bottom: 18px;
+            }
+            p {
+                font-size: 14px;
+                margin-bottom: 18px;
+            }
+            &.negative-right {
+                margin: 0;
+                padding: 25px;
+
+            }
+            &.negative-left {
+                margin: 0;
+                padding-right: 25px;
+            }
+        }
+    }
 }
-.product-features-container{
+.product-features-container {
     padding: 0 150px;
+    overflow: hidden;
+    @include media-down("lg"){
+        padding: 0;
+    
+    }
 }
-.featured-pagination{
-    .swiper-pagination{
+.feature1Swiper{
+    height: 100%;
+    img{
+        height: 100%;
+        width: 100%;
+    }
+}
+.featured-pagination {
+    .swiper-pagination {
         display: flex;
         margin-left: 20px;
         margin-bottom: 14px;
-        .swiper-pagination-bullet{
+        .swiper-pagination-bullet {
             width: 10px;
             height: 10px;
             background-color: $black;
-            &.swiper-pagination-bullet-active{
+            &.swiper-pagination-bullet-active {
                 background-color: $white;
             }
         }

@@ -1,12 +1,28 @@
 .btn-brown-outline {
     color: $brown;
-    min-width: 100px;
+    min-width: 110px;
     padding: 11px 20px;
     border: solid 1px $leather;
     transition: $transition;
+    display: inline-block;
+    text-align: center;
     font: 600 14px $montserrat;
     &:hover{
         background-color: $leather;
         color: $white;
+    }
+}
+
+.btn-butterscotch-leather-100{
+    color: $white;
+    background: linear-gradient(93deg, $butterscotch 20%, $leather-100 113%);
+    min-width: 110px;
+    padding: 11px 20px;
+    transition: $transition;
+    display: inline-block;
+    text-align: center;
+    font: 600 14px $montserrat;
+    &:hover{
+       opacity: 0.8;
     }
 }

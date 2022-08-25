@@ -34,3 +34,9 @@
     src: url(../fonts/Avenir-regular.ttf) format("TrueType");
     font-weight: 400;
 }
+
+@font-face {
+    font-family: $avenir;
+    src: url(../fonts/Avenir-book.ttf) format("TrueType");
+    font-weight: 450;
+}
