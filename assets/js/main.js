@@ -4,6 +4,25 @@ $(document).ready(function () {
     $("#footer").load("footer.html");
 });
 
+
+
+
+
+
+var feature1Swiper = new Swiper(".feature1Swiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    }
+});
+
+
+
+
+
+
 //#####Swiper Örneği######
 
 // var announcementSwiper = new Swiper(".announcementSwiper", {

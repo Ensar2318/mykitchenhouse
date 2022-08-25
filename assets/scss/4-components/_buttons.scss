@@ -1,0 +1,12 @@
+.btn-brown-outline {
+    color: $brown;
+    min-width: 100px;
+    padding: 11px 20px;
+    border: solid 1px $leather;
+    transition: $transition;
+    font: 600 14px $montserrat;
+    &:hover{
+        background-color: $leather;
+        color: $white;
+    }
+}
