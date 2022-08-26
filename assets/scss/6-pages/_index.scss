@@ -36,7 +36,7 @@
                 }
                 @include media-down("sm") {
                     font-size: 31px;
-                    padding-left: 0;
+                    padding-left: 10px;
                     width: 80%;
                 }
             }
@@ -46,7 +46,7 @@
                 margin-left: -190px;
                 padding-left: 220px;
                 @include media-down("sm") {
-                    padding: 20px 20px 10px 20px;
+                    padding: 20px 20px 10px 30px;
                     margin-left: -20px;
                 }
                 .heroSwiper-button-prev,
