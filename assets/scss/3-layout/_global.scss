@@ -12,4 +12,13 @@ body {
 }
 .first-section {
     padding-top: 200px;
+    @include media-down("lg") {
+        padding-top:90px;
+    }
+}
+.first-section-blog{
+    padding-top: 200px;
+    @include media-down("lg") {
+        padding-top:150px;
+    }
 }

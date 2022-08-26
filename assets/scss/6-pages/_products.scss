@@ -1,6 +1,9 @@
 .default-hero {
     padding-top: 130px;
     padding-bottom: 0;
+    @include media-down("lg"){
+        padding-top: 90px;
+    }
     img {
         width: 100%;
         height: 500px;
@@ -88,6 +91,7 @@
                 }
                 @include media-down("sm"){
                     min-width: auto;
+                    padding: 0 10px;
                 }
             }
         }
