@@ -2042,6 +2042,11 @@ footer .footer-copyright .socials a {
   background-size: cover;
 }
 
+@media (max-width: 991px) {
+  .contact-us-wrap {
+    margin-top: 40px;
+  }
+}
 .contact-us-wrap .title {
   font: 700 61px "montserrat";
   margin-bottom: 16px;
@@ -2157,6 +2162,7 @@ footer .footer-copyright .socials a {
 @media (max-width: 991px) {
   .default-faq-container {
     padding-left: 20px;
+    margin-top: 40px;
     padding-right: 20px;
   }
 }
@@ -2319,6 +2325,11 @@ footer .footer-copyright .socials a {
 
 .blog-detail-wrap {
   text-align: center;
+}
+@media (max-width: 991px) {
+  .blog-detail-wrap {
+    margin-top: 40px;
+  }
 }
 .blog-detail-wrap .title {
   font: 600 32px "montserrat";

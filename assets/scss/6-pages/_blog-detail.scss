@@ -7,11 +7,13 @@
 }
 .blog-detail-wrap {
     text-align: center;
-
+    @include media-down("lg") {
+        margin-top: 40px;
+    }
     .title {
         font: 600 32px $montserrat;
         margin-bottom: 33px;
-        @include media-down("lg"){
+        @include media-down("lg") {
             font-size: 25px;
             margin-bottom: 30px;
         }
@@ -20,7 +22,7 @@
         font: 700 29px $montserrat;
         color: $dark-beige;
         margin-bottom: 44px;
-        @include media-down("lg"){
+        @include media-down("lg") {
             font-size: 25px;
             margin-bottom: 10px;
         }
@@ -28,7 +30,7 @@
     img {
         width: 100%;
         border-radius: 8px;
-        @include media-down("md"){
+        @include media-down("md") {
             object-fit: cover;
             border-radius: 0px;
             height: 240px;
@@ -40,7 +42,7 @@
         font: 300 15px $montserrat;
         line-height: 30px;
         letter-spacing: 0.38px;
-        @include media-down("lg"){
+        @include media-down("lg") {
             padding: 0 25px;
         }
         ol,
@@ -59,7 +61,6 @@
 }
 
 .blog-swiper-wrap {
-   
     .blogSwiper {
         padding-right: 60px;
         @include media-down("md") {
@@ -72,7 +73,7 @@
     align-items: flex-end;
     justify-content: space-between;
     margin-bottom: 60px;
-    @include media-down("lg"){
+    @include media-down("lg") {
         margin-bottom: 30px;
     }
     .title {
@@ -94,20 +95,19 @@
     }
 }
 
-
 .blog-card {
     img {
         object-fit: cover;
         border-radius: 8px;
         height: 500px;
         width: 100%;
-        @include media-down("lg"){
+        @include media-down("lg") {
             height: 400px;
         }
-        @include media-down("md"){
+        @include media-down("md") {
             height: 300px;
         }
-        @include media-down("sm"){
+        @include media-down("sm") {
             height: 220px;
         }
     }
@@ -119,7 +119,7 @@
             margin-bottom: 16px;
             display: block;
             transition: $transition;
-            @include media-down("sm"){
+            @include media-down("sm") {
                 font-size: 16px;
             }
             &:hover {
@@ -131,8 +131,8 @@
             line-height: 1.6;
             letter-spacing: 0.38px;
             color: $charcoal-grey;
-            @include media-down("sm"){
-             display: none;
+            @include media-down("sm") {
+                display: none;
             }
         }
         .feature {
@@ -141,7 +141,7 @@
             letter-spacing: 0.38px;
             color: $grey-cool;
             margin-bottom: 12px;
-            @include media-down("sm"){
+            @include media-down("sm") {
                 font-size: 12px;
             }
         }

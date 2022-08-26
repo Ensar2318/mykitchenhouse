@@ -6,6 +6,9 @@
 }
 
 .contact-us-wrap {
+    @include media-down("lg") {
+        margin-top: 40px;
+    }
     .title {
         font: 700 61px $montserrat;
         margin-bottom: 16px;
