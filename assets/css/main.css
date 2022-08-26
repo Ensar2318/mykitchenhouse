@@ -1790,6 +1790,11 @@ footer .footer-copyright .socials a {
 .product-features-wrap {
   padding-top: 50px;
 }
+@media (max-width: 575px) {
+  .product-features-wrap {
+    padding-top: 0px;
+  }
+}
 .product-features-wrap .main-title {
   color: #af9762;
   font: 700 55px "montserrat";
@@ -1799,12 +1804,6 @@ footer .footer-copyright .socials a {
 @media (max-width: 991px) {
   .product-features-wrap .main-title {
     font-size: 45px;
-  }
-}
-@media (max-width: 575px) {
-  .product-features-wrap .main-title {
-    font-size: 30px;
-    margin-bottom: 20px;
   }
 }
 .product-features-wrap .product-feature-content {

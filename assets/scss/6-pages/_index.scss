@@ -81,6 +81,10 @@
 
 .product-features-wrap {
     padding-top: 50px;
+    @include media-down("sm") {
+      
+        padding-top: 0px;
+    }
     .main-title {
         color: $dark-beige;
         font: 700 55px $montserrat;
@@ -89,10 +93,7 @@
         @include media-down("lg") {
             font-size: 45px;
         }
-        @include media-down("sm") {
-            font-size: 30px;
-            margin-bottom: 20px;
-        }
+       
     }
     .product-feature-content {
         padding: 24px 31px;
