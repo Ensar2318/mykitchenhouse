@@ -6,27 +6,81 @@ header {
     z-index: 9999;
     background-color: $white;
     transition: $transition;
-    &.scrolled{
-        box-shadow: $box-shadow;
+    &.mobile-active{
+        .header{
+            .navbar{
+                max-height:300px;
+            }
+        }
+    }
+    &.scrolled {
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px 8px;
+    }
+    @include media-down("lg") {
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px 8px;
+    }
+    .toggle-mobile {
+        font-size: 24px;
+        color: $brown-100;
+        flex-basis: 100%;
+        cursor: pointer;
     }
     .logo {
         margin-right: auto;
         align-self: center;
+        @include media-down("lg") {
+            position: absolute;
+            left: 50%;
+            top: 15px;
+            width: 120px;
+            transform: translateX(-50%);
+        }
     }
     .header {
         display: flex;
-        height: 130px;
+        min-height: 130px;
         align-items: flex-end;
+        position: relative;
+        @include media-down("lg") {
+            align-items: center;
+            min-height: auto;
+            padding: 33px 30px;
+            flex-wrap: wrap;
+        }
+        .header-content-wrap {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+            @include media-down("lg") {
+                margin-bottom: 0;
+                width: 100%;
+            }
+        }
         .navbar {
             display: flex;
             align-items: center;
+            transition: $transition;
+            @include media-down("lg") {
+                flex-direction: column;
+                width: 100%;
+                overflow: hidden;
+                max-height: 0;
+            }
             .nav {
                 display: flex;
                 list-style: none;
+                @include media-down("lg") {
+                    flex-direction: column;
+                    width: 100%;
+                    margin-top: 20px;
+                }
                 li {
                     margin: 0 20px;
-                    @include media-down("xl"){
+                    @include media-down("xl") {
                         margin: 0 10px;
+                    }
+                    @include media-down("lg") {
+                        margin: 6px 0;
                     }
                     .nav-link {
                         font: 500 14px $montserrat;
@@ -53,32 +107,32 @@ header {
                 justify-content: center;
                 margin-left: 12px;
                 transition: $transition;
-                &:hover{
+                &:hover {
                     background-color: $brown-100;
                     color: $white;
                 }
             }
         }
-        .search-input{
+        .search-input {
             border: solid 1px $leather;
             margin-left: 40px;
             display: flex;
             align-items: center;
             background-color: $light-100;
             font: 500 14px $montserrat;
-            @include media-down("xl"){
+            @include media-down("xl") {
                 margin-left: 20px;
                 width: 150px;
             }
-            input{
+            input {
                 padding-left: 10px;
                 color: $black;
                 width: 100%;
-                &::placeholder{
+                &::placeholder {
                     color: $grey-100;
                 }
             }
-            span{
+            span {
                 align-items: center;
                 padding: 10px;
                 font-size: 18px;

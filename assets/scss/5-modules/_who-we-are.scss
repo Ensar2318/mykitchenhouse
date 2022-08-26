@@ -1,12 +1,17 @@
 .who-we-are-wrap {
     background-color: #f8f8f8;
+    @include media-down("lg"){
+        text-align: center;
+    }
     .title {
         font: 700 61px $montserrat;
         padding-bottom: 40px;
+     
     }
     .fs-1 {
         font: 500 22px $montserrat;
         line-height: 32px;
+      
     }
     .fs-2 {
         font: 450 16px $avenir;
@@ -19,8 +24,25 @@
             margin-right: 0;
         }
     }
+    @include media-down("sm"){
+        .title{
+            font-size: 29px;
+            padding-bottom: 15px;
+        }
+      .fs-1{
+        font-size: 20px;
+        padding-bottom: 15px;
+      }
+
+    }
     .image-container {
         position: relative;
+        @include media-down("sm"){
+            img{
+                height: 300px;
+                border-radius: 17px;
+            }
+        }
         .play-btn {
             width: 111px;
             height: 111px;

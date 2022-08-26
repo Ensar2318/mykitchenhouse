@@ -16,6 +16,14 @@
         font: 400 18px $montserrat;
     }
     margin-bottom: 100px;
+    @include media-down("sm") {
+        .title {
+            font-size:24px;
+        }
+        p{
+            font-size: 16px;
+        }
+    }
 }
 
 .faq-wrap {
@@ -57,6 +65,10 @@
                 padding-bottom: 50px;
                 @include media-down("lg") {
                     padding-right: 10px;
+                }
+                @include media-down("sm"){
+                    padding-right: 0;
+                    font-size: 14px;
                 }
             }
         }

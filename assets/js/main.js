@@ -17,7 +17,29 @@ $(document).ready(function() {
 
     });
 
+    $(".config-collapse-wrap .collapse-body").slideUp();
+    $(".config-collapse-wrap .collapse-body").removeClass("max-height");
+
+    $(".config-collapse-wrap .collapse-head").click(function(e) {
+        e.preventDefault();
+        if (!$(this).parent().hasClass("active")) {
+            $(".config-collapse-wrap .collapse-body").slideUp();
+            $(".config-collapse-wrap .config-collapse-item").removeClass("active");
+        }
+
+        $(this).parent().toggleClass("active");
+        $(this).parent().children(".collapse-body").slideToggle("active");
+
+    });
+
+
+ 
   
+
+});
+
+$(document).on('click', '.toggle-mobile', function () {
+    $("header").toggleClass("mobile-active");
 });
 
 $(document).scroll(function() {
@@ -36,7 +58,7 @@ var heroSwiper = new Swiper(".heroSwiper", {
         nextEl: ".heroSwiper-button-next",
         prevEl: ".heroSwiper-button-prev",
     },
-    speed:800
+    speed: 800
 
 });
 
@@ -79,13 +101,13 @@ var featuredProductFluidSwiper = new Swiper(".featuredProductFluidSwiper", {
 });
 
 var blogSwiper = new Swiper(".blogSwiper", {
-    slidesPerView: 1,
+    slidesPerView: 2,
     spaceBetween: 20,
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
     },
-    loop:true,
+    loop: true,
     breakpoints: {
 
         650: {
@@ -99,9 +121,31 @@ var blogSwiper = new Swiper(".blogSwiper", {
     },
     autoplay: {
         delay: 2000,
-      },
+    },
 
 });
+
+var init = false;
+function swiperCard() {
+    if (window.innerWidth <= 995) {
+        if (!init) {
+            init = true;
+            feature1Swiper = new Swiper(".product-detail-mobile-swiper", {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                }
+            });
+        }
+    } else if (init) {
+        feature1Swiper.destroy();
+        init = false;
+    }
+}
+swiperCard();
+window.addEventListener("resize", swiperCard);
 
 
 const lightbox = GLightbox({

@@ -1,18 +1,17 @@
 footer {
-    padding: 65px 0;
-    @include media-down("md"){
-        padding: 65px 20px;
-    }
+    padding-top: 65px;
+ 
 
     .logo-side {
-        img{
+        img {
             padding-bottom: 30px;
         }
         p {
             font: 400 14px $montserrat;
             line-height: 24px;
+
         }
-        @include media-down("lg"){
+        @include media-down("lg") {
             text-align: center;
         }
     }
@@ -26,32 +25,72 @@ footer {
         list-style: none;
         li {
             margin-bottom: 16px;
-            a{
+            a {
                 transition: $transition;
-                &:hover{
+                &:hover {
                     color: $leather;
                 }
             }
         }
     }
-    .footer-content-card{
+    .footer-content-card {
         border: solid 1px #f7f7f7;
         padding: 30px 28px;
         line-height: 24px;
-        li{
+        li {
             display: flex;
             align-items: center;
 
-            span{
+            span {
                 margin-right: 15px;
                 color: $brown-100;
                 font-size: 18px;
                 width: 20px;
-                &.icon-mail{
+                &.icon-mail {
                     font-size: 15px;
                 }
-                &.icon-map-pin{
+                &.icon-map-pin {
                     font-size: 25px;
+                }
+            }
+        }
+    }
+    .footer-copyright {
+        margin-top: 65px;
+        height: 100px;
+        background-color: $light;
+        align-items: center;
+        display: flex;
+
+        p {
+            font: 400 16px $montserrat;
+            color: $warm-grey;
+            @include media-down("sm"){
+                font-size: 12px;
+            }
+        }
+        .socials {
+            display: flex;
+            @include media-down("sm"){
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 3px;
+                min-width: 32px;
+                height: 32px;
+                border: solid 1px $grey;
+                margin-left: 17px;
+                color: $butterscotch;
+                font-size: 16px;
+                @include media-down("sm"){
+                    min-width: 26px;
+                    height: 26px;
+                    font-size: 12px;
+                    margin-bottom: 6px;
                 }
             }
         }

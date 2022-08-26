@@ -18,7 +18,7 @@
         font: 500 16px $montserrat;
     }
     .box {
-        width: 11.5%;
+        width: 160px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -37,6 +37,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        margin-bottom: 26px;
         .view-buttons {
             display: flex;
             a {
@@ -61,6 +62,298 @@
                 }
                 &:not(:first-child) {
                     margin-left: 13px;
+                }
+            }
+        }
+        .link-buttons {
+            display: flex;
+            align-items: center;
+            a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-width: 165px;
+                padding: 0 20px;
+                height: 50px;
+                border: solid 1px rgba(0, 0, 0, 0.1);
+                color: #000000;
+                font: 500 16px $montserrat;
+                transition: $transition;
+                &:not(:last-child) {
+                    margin-right: 24px;
+                }
+                &:hover,
+                &.active {
+                    color: $brown-100;
+                }
+                @include media-down("sm"){
+                    min-width: auto;
+                }
+            }
+        }
+    }
+    .product-head-search-wrap {
+        margin-bottom: 20px;
+        .search-input {
+            display: flex;
+            align-items: center;
+            height: 50px;
+            width: 100%;
+            border: solid 1px $grey;
+            .search {
+                padding: 0 12px 0 14px;
+                color: rgba(0, 0, 0, 0.4);
+            }
+            input {
+                height: 100%;
+                width: 100%;
+                font: 400 16px $montserrat;
+                color: $black;
+                &::placeholder {
+                    color: rgba(0, 0, 0, 0.2);
+                }
+            }
+        }
+    }
+}
+.product-grid-view-card {
+    .img-cover {
+        display: block;
+        overflow: hidden;
+        &:hover {
+            img {
+                transform: scale(1.1);
+            }
+        }
+        img {
+            transition: $transition;
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            @media (max-width: 400px) {
+                height: 162px;
+            }
+        }
+    }
+
+    .content {
+        margin-top: 25px;
+        .title {
+            font: 600 25px $montserrat;
+            color: $brown-100;
+            margin-bottom: 25px;
+            display: block;
+            transition: $transition;
+            &:hover {
+                color: $leather;
+            }
+            @include media-down("sm"){
+                margin-bottom: 6px;
+                font-size: 16px;
+            }
+        }
+        .sub-title {
+            font: 600 14px $montserrat;
+            margin-bottom: 25px;
+            @include media-down("sm"){
+                margin-bottom: 6px;
+           
+            }
+        }
+        p {
+            margin-bottom: 20px;
+            font: 400 14px $montserrat;
+            color: rgba(0, 0, 0, 0.699);
+        }
+    }
+}
+.five-grid {
+    .col-xl-2 {
+        @include media-up("xl") {
+            width: 20%;
+        }
+    }
+}
+
+.product-list-view-card {
+    margin-bottom: 32px;
+    .img-area {
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            transition: $transition;
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+    .content {
+        background-color: $ghost;
+        padding: 44px 38px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        .title {
+            font: 600 58px $montserrat;
+            position: relative;
+            padding-bottom: 11px;
+            margin-bottom: 70px;
+            transition: $transition;
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 190px;
+                height: 7px;
+                background-color: $brown-100;
+                @include media-down("md"){
+                    height: 4px;
+                }
+                @include media-down("sm"){
+                 width: 100px;   
+                }
+               
+            }
+            &:hover {
+                color: $brown-100;
+            }
+            @include media-down("md"){
+                margin-bottom: 20px;
+            }
+            @include media-down("sm"){
+                font-size: 25px;
+                margin-bottom: 15px;
+            }
+        }
+        .sub-title {
+            font: 600 21px $montserrat;
+            margin-bottom: 24px;
+        }
+        p {
+            font: 300 16px $montserrat;
+            line-height: 23px;
+        }
+        .learn-more {
+            margin-top: auto;
+            display: inline-block;
+            min-width: 136px;
+            padding: 17px 30px;
+            background: linear-gradient(93deg, #e6bb52 20%, #a87c2c 113%);
+            color: $white;
+            font: 600 23px $montserrat;
+            transition: $transition;
+            &:hover {
+                opacity: 0.7;
+            }
+            @include media-down("md"){
+                margin-top: 14px;
+                min-width: auto;
+                font-size: 20px;
+                height: auto;
+                padding: 8px 20px;
+            }
+            @include media-down("sm"){
+                font-size: 13px;
+               
+            }
+        }
+    }
+}
+
+.config-collapse-item {
+    &.active {
+        .collapse-head {
+            border-color: #ffff;
+            .plus-line {
+                .icon-plus {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+                .icon-line {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+
+            .decor-icon {
+                color: #919191;
+            }
+        }
+    }
+    .collapse-head {
+        display: flex;
+        align-items: center;
+        padding: 30px 0;
+        border-bottom: solid 1px #e8d9d9;
+        cursor: pointer;
+        transition: $transition;
+        .plus-line {
+            width: 20px;
+            position: relative;
+            .icon-plus {
+                transition: $transition;
+                font-size: 10px;
+                position: absolute;
+            }
+            .icon-line {
+                font-size: 2px;
+                opacity: 0;
+                visibility: hidden;
+                transition: $transition;
+                color: $brown-100;
+                position: absolute;
+            }
+        }
+
+        .decor-icon {
+            font-size: 60px;
+            color: $dark-beige;
+            margin-left: 20px;
+            width: 80px;
+            text-align: center;
+            transition: $transition;
+        }
+        .text-title {
+            margin-left: 20px;
+            font: 500 16px $montserrat;
+        }
+    }
+    .collapse-body {
+        overflow: hidden;
+        &.max-height {
+            max-height: 0;
+        }
+        .content {
+            min-height: 160px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            background-color: $ghost;
+            @include media-down("sm"){
+                justify-content: space-between;
+            }
+
+            .content-item {
+                text-align: center;
+                padding: 40px;
+                width: 180px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                @include media-down("md"){
+                    width: 100px;
+                }
+                span {
+                    color: $brown-100;
+                    font-size: 40px;
+                }
+                .title {
+                    font: 500 13px $montserrat;
+                    margin-top: 24px;
                 }
             }
         }

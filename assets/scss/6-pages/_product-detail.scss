@@ -1,8 +1,28 @@
 .product-detail-images-wrap{
-    img{
+    .swiper-slide{
         width: 100%;
-        &:not(:last-child){
-            margin-bottom: 15px;
+       
+    }
+    @include media-up("lg"){
+        .swiper-wrapper{
+            display: block;
+        }
+        .swiper-slide{
+            &:not(:last-child){
+                margin-bottom: 15px;
+            }
+        }
+    }
+    .swiper-pagination{
+        margin-bottom: 20px;
+        .swiper-pagination-bullet{
+            width: 20px;
+            height: 20px;
+            background-color: $white;
+            @include media-down("sm"){
+                width: 10px;
+                height: 10px;
+            }
         }
     }
 }
@@ -13,6 +33,10 @@
     padding: 60px 36px;
     background-color: #F5F5F5;
     transition: $transition;
+    @include media-down("lg"){
+        margin: 20px;
+        position: static;
+    }
     .sub-title{
         font: 600 20px $montserrat;
     }
