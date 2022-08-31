@@ -1,8 +1,5 @@
 // Header ve footer load işlemi
 $(document).ready(function() {
-    $("#header").load("header.html");
-    $("#footer").load("footer.html");
-
     $(".faq-wrap .faq-content").slideUp();
     $(".faq-wrap .faq-title").click(function(e) {
         e.preventDefault();
