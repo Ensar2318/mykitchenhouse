@@ -9,6 +9,7 @@ header {
     &.mobile-active{
         .header{
             .navbar{
+                margin-top: 10px;
                 max-height:300px;
             }
         }
@@ -63,7 +64,7 @@ header {
             @include media-down("lg") {
                 flex-direction: column;
                 width: 100%;
-                overflow: hidden;
+                overflow: auto;
                 max-height: 0;
             }
             .nav {
