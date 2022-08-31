@@ -156,6 +156,29 @@ const lightbox = GLightbox({
 
 
 
+var brandinfoSwiper = new Swiper(".brandinfoSwiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        550: {
+            slidesPerView: 1,
+            spaceBetween: 50,
+        },
+        800: {
+            slidesPerView: 2,
+            spaceBetween: 50,
+        },
+        1300: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+    }
+
+});
 
 
 
